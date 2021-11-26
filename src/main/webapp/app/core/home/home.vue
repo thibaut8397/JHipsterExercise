@@ -1,11 +1,13 @@
 <template>
   <div class="home row">
-    <div class="col-md-3">
-      <span class="hipster img-fluid rounded"></span>
-    </div>
     <div class="col-md-9">
-      <h1 class="display-4" v-text="$t('home.title')">Welcome, Java Hipster!</h1>
-      <p class="lead" v-text="$t('home.subtitle')">This is your homepage</p>
+      <h1 class="display-4" v-text="$t('home.title')">Welcome on our shop !</h1>
+
+      <div class="topnav">
+        <input type="text" placeholder="Search.." size=100>
+      </div>
+
+      <button id="search-button" type="button">Search..</button>
 
       <div>
         <div class="alert alert-success" v-if="authenticated">
@@ -28,52 +30,25 @@
         </div>
       </div>
 
-      <p v-text="$t('home.question')">If you have any question on JHipster:</p>
+      <div id="my-div" text-align = center>
+	  <a href="http://localhost:9000/ItemDetails">
+	  <p class="text">test</p>
+	  <img src="../../../content/images/logo-jhipster.png" /></a>
+	</div>
 
-      <ul>
-        <li>
-          <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" v-text="$t('home.link.homepage')"
-            >JHipster homepage</a
-          >
-        </li>
-        <li>
-          <a
-            href="http://stackoverflow.com/tags/jhipster/info"
-            target="_blank"
-            rel="noopener noreferrer"
-            v-text="$t('home.link.stackoverflow')"
-            >JHipster on Stack Overflow</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://github.com/jhipster/generator-jhipster/issues?state=open"
-            target="_blank"
-            rel="noopener noreferrer"
-            v-text="$t('home.link.bugtracker')"
-            >JHipster bug tracker</a
-          >
-        </li>
-        <li>
-          <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" v-text="$t('home.link.chat')"
-            >JHipster public chat room</a
-          >
-        </li>
-        <li>
-          <a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer" v-text="$t('home.link.follow')"
-            >follow @jhipster on Twitter</a
-          >
-        </li>
-      </ul>
-
-      <p>
-        <span v-text="$t('home.like')">If you like JHipster, don't forget to give us a star on</span>
-        <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" v-text="$t('home.github')"
-          >GitHub</a
-        >!
-      </p>
     </div>
   </div>
 </template>
+
+<style>
+	#my-div {
+		text-align : center;
+	}
+	
+	#search-button {
+	position: absolute;
+	top: 75px; left: 800px;
+	}
+	</style>
 
 <script lang="ts" src="./home.component.ts"></script>
